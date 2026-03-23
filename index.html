@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un regalo para mi bro</title>
+    <style>
+        /* Importamos una fuente estilo pixel */
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffdae9; /* Fondo rosado claro */
+            font-family: 'Press+Start+2P', cursive;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .container {
+            max-width: 90%;
+        }
+
+        h1 {
+            color: #d11d5d;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #ff85a1;
+            font-size: 12px;
+            margin-bottom: 30px;
+        }
+
+        .boton {
+            background-color: #ff85a1;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-family: 'Press+Start+2P', cursive;
+            font-size: 14px;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px #d11d5d;
+            transition: all 0.2s;
+        }
+
+        .boton:active {
+            box-shadow: 0 0 #d11d5d;
+            transform: translateY(4px);
+        }
+
+        /* Estilo para la imagen oculta */
+        #regalo {
+            display: none;
+            max-width: 100%;
+            height: auto;
+            border: 8px solid white;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            animation: aparecer 1s ease-in forwards;
+        }
+
+        @keyframes aparecer {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container" id="contenido-inicial">
+        <h1>Bro te tengo un regalo para alegrarte el día</h1>
+        <p>ábrelo</p>
+        <button class="boton" onclick="mostrarRegalo()">ABRIR</button>
+    </div>
+
+    <img src="prima.jpg" id="regalo" alt="Tu regalo">
+
+    <script>
+        function mostrarRegalo() {
+            // Ocultamos el texto y el botón
+            document.getElementById('contenido-inicial').style.display = 'none';
+            // Mostramos la imagen
+            document.getElementById('regalo').style.display = 'block';
+            // Cambiamos el fondo para que resalte la foto si quieres
+            document.body.style.backgroundColor = "#fff0f5";
+        }
+    </script>
+</body>
+  </html>
+  
